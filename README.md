@@ -1,10 +1,6 @@
 # libraryInstaller
 Shell script for libray installer
 
-- Teste
-=======
-Shell script for libray installer.
-
 ## Directory
 - OpenCV ( OpenCV installation file )
 
