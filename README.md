@@ -1,5 +1,4 @@
 # libraryInstaller
-<<<<<<< HEAD
 Shell script for libray installer
 
 - Teste
@@ -21,4 +20,3 @@ How to execute your file.
 - If option = none, then only Opencv is configured to be used
 - If option = cuda, then CUDA is configured to be used
 - If option = opencl, then OpenCL is configured to be used
->>>>>>> f323bbde164b8de5aca3a2728125b43b21708972
