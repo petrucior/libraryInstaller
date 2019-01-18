@@ -69,25 +69,36 @@ if [ $1 == "cuda" ]; then
 	     #gcc --version
 	     #uname -r
 
+	     # Install from Hands on GPU Accelerated Computer Vision With OpenCV and CUDA 
+	     #---------------------------------------------------------------------------
 	     # Install repository meta-data
-	     sudo dpkg -i cuda-repo-<distro>_<version>_<architecture>.deb
+	     #sudo dpkg -i cuda-repo-<distro>_<version>_<architecture>.deb
 
 	     # Installing the CUDA public GPG key
-	     sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+	     #sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
 
 	     # Update the Apt repository cache
-	     sudo apt-get update
+	     #sudo apt-get update
 	     
 	     # Install CUDA
-	     sudo apt-get install cuda
+	     #sudo apt-get install cuda
 
 	     # The PATH variable needs to include /usr/local/cuda-10.0/bin
-	     export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+	     #export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
 
 	     # To change the environment variables for 64-bit operating systems:
-	     export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64\
-		    ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+	     #export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64\
+	     #	 ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
+	     #---------------------------------------------------------------------------
+
+	     # Install alternative
+	     #---------------------------------------------------------------------------
+	     sudo add-apt-repository ppa:graphics-drivers/ppa
+	     sudo apt-get update
+	     sudo ubuntu-drivers autoinstall
+	     #---------------------------------------------------------------------------
+	     
 	     # CUDA toolkit
 	     sudo apt-get -y install nvidia-cuda-toolkit
 	     
