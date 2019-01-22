@@ -5,6 +5,13 @@
 # Update: January, 2019.
 # Attention: The installation of Opencv need rebooting of operating system.
 
+#-------------------------------------------------------------------------
+#    Version Tested     |          SO          |        Date
+#-------------------------------------------------------------------------
+#         3.4.0         |     Ubuntu 18.04     |     January, 2019
+#-------------------------------------------------------------------------
+
+
 # Installation information
 function printUsage(){
     echo "Use these commands: ";
@@ -41,14 +48,17 @@ sudo apt-get -y install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev l
 git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 
+# Version OpenCV
+version=3.4.0
+
 # Accessing OpenCV extra
 \cd opencv_contrib/
-git checkout 3.4.0
+git checkout $version
 \cd ../
 
 # Accessing OpenCV and creating build diretory
 \cd opencv/
-git checkout 3.4.0
+git checkout $version
 mkdir build
 \cd build/
 
